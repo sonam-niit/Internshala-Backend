@@ -1,0 +1,124 @@
+Node Js
+---------------------
+Run time Environment
+platform using that we can run JS code without embedding them in HTML.
+
+Node js if you need to use then first of all install the same.
+Once it is installed check the version by executing below command in CMD
+
+> node -v
+
+When we install node we will get npm (node package manage) with itself with the help of that we can manages packages bu installing and unistalling the same.
+
+Node Js Provides 3 types of Modules
+
+1. Core Modules
+	inbuilt modules which are already available when you install node, you can use then directly.
+
+	example: fs, url, http, querystring, path , os etc...
+2. Local modules:
+	which we can create in one file or folders and use it by importing it to the another folder or file.
+
+3. Third party modules:
+
+	this are the extra modules which are available on npmjs.com which you can download using npm i command
+
+	for isntallation also we have multiple ways
+
+	>npm i nodemon -g (install globally which is acessible through out your system from any directory
+	
+	>npm i nodemon (install locally means accessible to that perticular folder only)
+
+	(Most of the time it is suggested to install locally only to manage the versions application wise.
+
+	for uninstall
+	>npm uninstall package-name
+	>npm uninstall package-name -g (remove from global installation)
+
+Node REPL: read execute print loop
+-----------------------------------------
+just execute node command and then you will be inside repl where you can execute your node statements directly.
+
+Most of the times using Node we used to create a server. For server creation we use http module which is also available with node.
+
+
+Express: Its a framework of Node Js which is basically used to create servers / restful API (Aplication program Interface)
+
+REST (Representational State Transfer)
+
+Represent your data in that format which is easily understandable by all (JSON)
+State : the data which you want to transfer
+Transfer : How to transfer (use some popular protocol - http and use its methods get/post/put/delete)
+
+
+Right now we are not creating any frontend then once we create APIs how to check them?
+
+to check we required a took called POSTMAN for checking all the APIs.
+
+--Whenever you install any package locally it will update your package.json file where you can see the dependency installed
+-- it will create package-lock.json file where the dependencies actua address you can see where it shows from exactly where the dependency downloaded.
+--always suggested to save your lock file to get the original dependecies of your project to not face any version confliction issues.
+--node_modules folder also get generated when you download any dependencies, if you want to share your project to someone you can delete this folder, when someone download your project then just execute npm i command and it will download all your packages mentioned from lock file.
+
+Let's create s server using Expess.
+
+Create one folder open it in VS Code
+1. create package.json file
+	>npm init -y
+   install express
+	>npm i express
+
+2. create server.js 
+
+3. run it using node server.js command.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
