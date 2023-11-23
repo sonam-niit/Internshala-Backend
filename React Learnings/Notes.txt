@@ -1,0 +1,22 @@
+React
+-----------------
+it is a library which is used to created Frontend Applications.
+
+We can create A SPA (single Page application using React)
+As its a single page application to structure our code we will use Components.
+
+Components are reusable and independant bits of code which looks JS functions only.
+
+How to create React App:
+>npx create-react-app appname
+
+once the app created move to the app folder
+
+>npx create-react-app demoapp
+>cd demoapp
+open vs code from here
+>code .
+
+to start the React application
+>npm start
+
