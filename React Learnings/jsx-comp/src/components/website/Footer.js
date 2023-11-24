@@ -1,7 +1,8 @@
 import React from 'react';
+import './CSS/footer.css'; //apply external CSS
 function Footer() {
     return ( 
-        <div className='container'>
+        <footer className='container'>
             <div className='row'>
                 <div className='col'>
                     <button className='btn btn-link d-block'>Home</button>
@@ -28,7 +29,7 @@ function Footer() {
                     <button className='btn btn-link d-block'>Home</button>
                 </div>
             </div>
-        </div>
+        </footer>
      );
 }
 
