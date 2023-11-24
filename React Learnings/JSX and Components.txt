@@ -1,0 +1,223 @@
+npx? node package execute.
+
+when we install node we will get npm and npx with that.
+
+It like a executer which is used to execute some pakages without installing them globally.
+
+You can use it to rum some packages (some commands) without installing them globally.
+
+(old commands)
+
+>npm i create-react-app -g
+>create-react-app appname
+
+(latest if you want to install no need to install create-react-app you can just execute for creating app)
+>npx create-react-app
+
+Create-react-app ?
+------------------------------------
+It is a command line tool which helps you to sets up a new React application with some default configuration.
+
+You will get a well organized app structure and all necessary dependencies configured in the same.
+
+
+-----npx create-react-app myapp
+
+npx downloads the latest version of create-react-app from npm registery with the given project name.
+Then create-react-app sets up a projecr with the foldername myapp and in that folder you will get a basic react project structure.
+
+***** JSX *****
+
+Javascript XML
+Javascript Syntax Extention.
+
+It allows us to write HTML code inside the javascript files.
+
+what is the syntax?
+------------------------
+
+const element= <h1>Hello JSX </h1>;
+
+Embedd expression then how?
+-----------------------------------
+const name= "Internshala.com"
+const element = <h1> Hello {name} </h1>
+
+How to add Attributes
+----------------------------
+const imageUrl= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmgUYtJYrZ05tQN_7X7tFwSNJTCkfy8wPPlbVFT7-p&s"
+const element= <img src={imageUrl} alt="Compaany Logo" />
+
+
+When const ele= <h1>Hello JSX </h1> will execute what happen internally?
+
+it will create React element
+const ele= React.createElement('h1',null,'Hell JSX'); (transformed syntax)
+
+---------------------------------------------------------------------------
+Nested Elements
+--JSX allows you to nest elements, using that you cna make the structue of your UI components.
+
+How?
+
+<div>
+    <h1>Hello</h1>
+    <p>React is an Awesome Library</p>
+</div>
+
+For few tags you can use Self-close, no need to close seperatly
+
+<img /> 
+<input />
+
+Conditional Rendering
+-----------------------------------
+Using JSX we can apply some JS logic to render elements conditionally.
+
+const isLoggedIn=true;
+const ele= isLoggedIn? <p>Welcome User..!!</p> : <p>Kindly LogIn ...</p>
+
+Display objects and array Objects in JSX.
+------------------------------------------
+UseCase3
+
+Components
+-------------------------------
+React application is by default having only 1 component (app.js)
+
+We can create our full code in that but its quite difficult to maintain, but using component we can divide our codes into small parts which is easy to maintain.
+
+They are reusable too.
+
+1. Class Component:
+
+	we can create component by creating a class.
+
+	//Class Component
+
+import { Component } from "react";
+
+class UseCase4 extends Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+    // state = {  }
+    render() { 
+        return ( <div>
+                <h4>Hello From Class Component</h4>
+        </div> );
+    }
+}
+ 
+export default UseCase4 ;
+
+class name is UseCase4 which is inheriting the properties of Component class which is available in react. to render the output used render method, whatever you return from render method it will displayed.
+
+
+Now a days we are not using Class Components Why?
+---------------------------------------------------
+   -- Function code are are more readabale and Simple
+   -- From react 16.8 hooks introduced to have state and lifecycle features.
+   -- useState and useEffect hook simplify more component logics and reduce the need of class component
+   -- promotes more reusability of your codes with the help of custom hooks
+   -- provides better performance of hooks that class components, react team optimized the same and suggested to avoid class 	components.
+
+2. Functional Component:
+
+   its nothing but a JS function which makes component.
+
+	Basic Structure:
+
+	const MyComponent = () =>{
+		return <p>Hello </p>
+	}
+
+
+
+	This considered as MyComponent
+
+	to use it in diffrent files must export using export.default and the import to other files.
+
+In app component I am including the above created component <MyComponent />
+
+	what happens here?
+
+	when any component included or in main application it gets rendered into DOM, the JSX transformed into React Elements and now the component becomes a part of Virtual DOM.
+
+	
+
+
+Let's create Some Application Structure Using Components.
+
+	create Header, slider, footer componets.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

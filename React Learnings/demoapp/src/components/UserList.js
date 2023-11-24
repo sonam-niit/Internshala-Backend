@@ -18,7 +18,7 @@ function UserList() {
     //use UseEffect hook which will run in background to fetch Data
     useEffect(() => {
         getData();
-    }, []) //[] says it will run only once when the comp renders
+    },[]) //[] says it will run only once when the comp renders
     return (<div>
         <h3>User List</h3>
         <table className='table table-striped table-bordered'>

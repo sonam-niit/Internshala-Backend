@@ -6,6 +6,7 @@ import Register from './components/Register';
 import Footer from './components/Footer';
 import Sample from './components/Sample';
 import UserList from './components/UserList';
+import Counter from './components/Counter';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
         <h1>React App</h1>
         <Header />
+        <Counter />
 
       <Routes>
         <Route path='/login' element={<Login />}></Route>

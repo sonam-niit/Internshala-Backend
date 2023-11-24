@@ -4,7 +4,10 @@ const storage=require('node-persist');
 const cors= require('cors');
 
 //intialize storage
-storage.init()
+async function init(){
+   await storage.init()
+   await storage.clear();
+}
 //create server
 
 const app= express();
@@ -59,4 +62,5 @@ app.delete("/user/:id",(req,res)=>{
 //start server
 app.listen(5000,()=>{
     console.log("Server Started");
+    init();
 })
