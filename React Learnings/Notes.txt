@@ -1,0 +1,52 @@
+React
+-----------------
+it is a library which is used to created Frontend Applications.
+
+We can create A SPA (single Page application using React)
+As its a single page application to structure our code we will use Components.
+
+Components are reusable and independant bits of code which looks JS functions only.
+
+How to create React App:
+>npx create-react-app appname
+
+once the app created move to the app folder
+
+>npx create-react-app demoapp
+>cd demoapp
+open vs code from here
+>code .
+
+to start the React application
+>npm start
+
+How to create components?
+
+Components are actually of 2 types
+1. class component
+2. functional component
+
+Now a days compnies more focused with functional components only as class component is reducing the preformance of your application.
+
+
+How to create Functional Component.
+
+create a function with function keyword and give the Function name starts with Capital Letter (UpperCamelCase)
+
+function Header(){
+}
+
+You must export the component to use it in your main application.
+
+To use the component use it in the form of tag like <Header />
+
+
+
+
+
+
+
+
+
+
+

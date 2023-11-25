@@ -1,0 +1,11 @@
+.divcon{
+    border: 2px solid red;
+    padding: 10px;
+
+}
+.form{
+    border: 2px solid green;
+}
+.details{
+    border: 2px solid blue;
+}

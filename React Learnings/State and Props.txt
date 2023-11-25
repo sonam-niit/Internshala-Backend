@@ -1,0 +1,7 @@
+React states are like small pockets of information which components can carry with them.
+
+Simply we can say that they are like a component's own storage unit for storing data.
+
+When a components state changed react component re renders automatically and update the new data.
+
+ 
