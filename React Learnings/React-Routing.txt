@@ -1,0 +1,60 @@
+Routing
+----------------------------
+
+React is a SPA (Single Page Application) Means all the components are going to render in only one component like parent component which is app.js
+
+Means based on the links if you wnat to render diffrent components then we can take the help of routing.
+
+Routing helps us to create navigations links
+
+localhost:3000/login
+localhost:3000/register
+
+to make this links we can use one library react router dom.
+
+>npm i react-router-dom
+
+once it is installed we can start using the same in our application.
+
+================================================================================
+
+<BrowserRouter> component available in the react router dom which actually using HTML5 history API to keep UI in sync with the URL.
+
+it provides th context of routing and also enables diffrent routing components like Routes, Route.
+Thats why its suggested to put all Routes and Route tags inside the browserrouter tag otherwise you want be able to route with the links.
+
+--> it creates a history object and also keeping our UI in sync and work with the created URL by rendering the components based on the current location.
+
+<Routes> is a component used to wrap multiple routes inside the same. (its a replacement of switch component of old version react-router-dom)
+ --->its including the features like relative routing and linkings, automatic route ranking, nested routes and layout.
+ 
+<Route> resoponsible for rendering the UI of React component.
+
+its having 2 props
+	1. path: which is always matches the current URL of the application
+	2. element: it tells the route component when the current URL is encountered which components needs to be rendered
+		(element is updated keyword of component)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
