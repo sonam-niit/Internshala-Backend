@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 function ProductList() {
 
-
     return (<div>
         <h3>Product List</h3>
         <table className='table table-bordered table-striped'>
@@ -17,7 +16,7 @@ function ProductList() {
                             <td>{item.name}</td>
                             <td>{item.brand}</td>
                             <td><Link className='btn btn-success'
-                            to={`/details/${item.id}`}>View</Link></td>
+                             to={`/details/${item.id}`}>View</Link></td>
                         </tr>
                      ))
                 }

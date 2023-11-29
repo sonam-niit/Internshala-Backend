@@ -1,0 +1,17 @@
+PropDrilling
+-----------------
+Parent (test)
+	child
+		child
+			child
+				use test here
+
+Pass the data through each child to access the same at last component which is called as prop drilling.
+
+
+Context API
+------------------------
+To solve the above problem either we can manage the state using context API or we can use redux for the Global State management.
+
+
+

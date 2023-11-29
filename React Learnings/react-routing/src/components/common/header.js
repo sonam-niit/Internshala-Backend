@@ -29,6 +29,9 @@ function Header() {
                 <li className="nav-item">
                    <Link to='/productlist' className='nav-link'>Product List</Link>
                 </li>
+                <li className="nav-item">
+                   <Link to='/users' className='nav-link'>Users List</Link>
+                </li>
             </ul>
         </header>
 
