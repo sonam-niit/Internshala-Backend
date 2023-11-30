@@ -1,0 +1,55 @@
+Understand the Virtual DOM / How React is updating its UI
+--------------------------------------------------------------
+
+When a component renders, React creates a Virtual DOM or generating the element tree in the component.
+Now whenever the state of the component chnages, react recreates a virtual DOM tree and compares the result with the prev result and it will only update the changes in actual element by comparing actual element with virtual DOM (Diffing)
+
+React uses the VIRTUAL DOM its minimize the preforance cost of re rendering a webpage. 
+when the state change state changes its re render
+
+
+React.memo is the higher order component which is used to wrap a purely functional component to prevent re rendering if the props reveived in that component which is not changed
+
+<input> Changed S, SO, SON, SONA, SONAM
+
+<COunt> chnage 1,1,1,1,1 (if count changed ? no then don;t render
+
+
+useMemo Hook helps us to avoid re-computing the expensive calculation in a perticular componet. 
+
+Basicall helps to memoize the values and only re-compute when the dependency change.
+
+useMemo(()=>{},[])
+
+Code Splitting using React Dynamic import
+-----------------------------------------------
+very important and optimization technique.
+
+import Home from '../ ';
+
+
+<Home />
+<Aboou />
+
+
+const About = React.lazy(()=>import("./components/About"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
