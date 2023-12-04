@@ -1,0 +1,234 @@
+Databases
+----------------------
+App required some storage to store data...
+if you want to store a small amount of data then we can use files (text files, excel sheets etc)
+But when you have more data and your data is have relationship to other data then we required some storages where we can make some relationships between data.
+
+Where we are storing data: called Database
+---------------------------------------------
+And the system which we are following is called Database management System.
+
+We have diffrent types of databases available in the market.
+--network databases
+--hybrid databases
+--hyrachical databases
+--Relational Databases
+
+The most popular is RDBMS (relational Database management system)
+
+where storing information in the form of tables
+
+columns:: fields
+rows :: records
+
+multiple tables can have relationships between them :: one to many, many to many, one to one.
+
+============================================================================================
+Examples of RDBMS: Oracle, MySQL, MS Access, MS SQL Server, PostGreSQL
+
+They are called as Sequel databases because to operate all these databases we are using a commong language for Query is SQL (structured Query Language)
+
+
+We want to use MySQL
+----------------------------
+1. Install XAMPP Server: download xampp server --> install by just doing next next finish..
+2. MYSQL Community Server: MSI installer --> .msi file --> Double click --> full installation
+
+Create database sample;
+
+use sample;
+
+create table student (id int primary key auto_increment, name varchar(20),email varchar(50),username varchar(50),password varchar(50));
+
+Once the Table created execute the command:  describe student;
+
+(to see the table structure in command line)
+
+Let's Insert Data in database:
+ insert into student (name,email,username,password) values ('sonam','sonam@gmail.com','sonamsoni','sonam@123');
+
+for retrival: select * from student;
+
+Let's retrive some selected data no all (use where clause)
+
+-- select * from student where email='sonam@gmail.com';
+--  select * from student where id=1;
+--  select * from student where username='sonamsoni' and password='Sonam@123';
+
+=====================================================================================
+Data Update
+
+-- update student set name='Sonam Soni' where id=1;
+
+(if you forget to write where clause then it will update all your rows);
+
+-- update student set password='1234'
+
+Delete Query
+-------------------
+
+-- delete from student where id=1;
+
+-- delete from student (without where clause it will delete all the records)
+
+******************************************************************************************
+While storing information in large stack there are the chances to duplicate cate, to remove duplication we should store data in diffrent tables.
+
+But those 2 tables you can connect with the help of Relationships.
+
+Category: id, name, description
+
+product: id , name , price , desc , categorydetail(ref of category table as foreign key)
+
+create table category (cid int primary key, auto_increment, name varchar(40));
+
+create table product (id int PRIMARY KEY AUTO_INCREMENT, name varchar(40), price double, catid int,FOREIGN KEY(catid) REFERENCES category(cid))
+
+insert into category (name) values ('electronics');
+insert into products (name,price,catid) values ('headphone',499,1);
+
+Now to fetch the data from above 2 table together we can take the help of joins we will join 2 tables based on Category ID.
+
+select * from product p join category c on p.catid = c.cid; (will get all columns)
+
+select p.id,p.name,p.price,c.cid from product p join category c on p.catid = c.cid; (get limited columns)
+
+--select p.id,p.name,p.price,c.name from product p join category c on p.catid = c.cid
+where p.price>=5 and p.price<=20;
+
+*************************************************************************************************
+DDL: Data Defination Language (create or altering something)
+	-- create table
+	-- alter table
+	-- drop table
+DML : Data Manupulation Language
+
+	-- insert
+	-- update
+	-- delete
+
+DQL : Data Query Language (Retrival)
+
+	--SELECT
+
+
+TCL : Transaction Control Language
+
+	-- all execution done successfully : commit transaction
+	-- any problem inbetween : rollback 
+
+
+-------------------------------------------------------------------------------
+drop (delete the table), truncate (it will delete the records from the table and re create the structure of table)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
