@@ -1,0 +1,111 @@
+Import and export functions in Common JS
+----------------------------------------------
+
+function addTodo(){
+    console.log("Task Added");
+}
+function removeTodo(){
+    console.log("Task Removed");
+}
+
+//Normal Export using Common JS
+module.exports={
+    addTodo,
+    removeTodo
+}
+==============================================
+import in ANother File
+----------------------------------------
+
+//Import
+
+const { addTodo, removeTodo} = require("./todo");
+
+addTodo();
+removeTodo();
+
+****************************************************
+ModuleJs Import export
+
+Create package.json file
+-----------------------------------
+add one property: type:'module'
+
+create file which you wnat to import using .mjs extention.
+
+todo.mjs
+-----------------
+
+//idndividual Export
+export function displayData(data){
+    console.log("Following is the Data")
+    console.log("=============================");
+    console.log(data)
+}
+
+function addTodo(){
+    console.log("Task Added");
+}
+function removeTodo(){
+    console.log("Task Removed");
+}
+//Single Export
+export var name="Sonam";
+//combining multiple functions into one variable
+export var log={
+    info: function(info){
+        console.log('Info: '+info)
+    },
+    warning: function(warning){
+        console.log(`Warning ${warning}`)
+    },
+    error:function(error){
+        console.log(`Error ${error}`)
+    }
+}
+
+export {addTodo,removeTodo}
+
+
+to use above file. useTodo.js
+
+//Import
+
+import { addTodo, displayData, log, name, removeTodo } from "./todo.mjs";
+
+addTodo();
+removeTodo();
+displayData(name);
+log.info('This is just an information Log..');
+log.warning('Should not declare variable using var')
+
+=================================================================
+
+
+Default exports are used to export a single (main) value from a module.
+
+//Import
+import sonam from "./todo.mjs"; //call default function
+import { addTodo as test, displayData, log, name, removeTodo } from "./todo.mjs";
+//above we renamed asTodo as test
+
+test();
+removeTodo();
+displayData(name);
+log.info('This is just an information Log..');
+log.warning('Should not declare variable using var');
+
+sonam(); //call myApp function
+
+
+
+
+
+
+
+
+
+
+
+
+
