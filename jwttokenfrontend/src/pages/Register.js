@@ -10,7 +10,7 @@ function Register() {
         e.preventDefault();
         //console.log(user);
         try {
-            const resp = await axios.post('https://jwtdemo.onrender.com/auth/register', user);
+            const resp = await axios.post('https://jwtdemo.onrender.com/api/auth/register', user);
             //console.log(resp);
             if (resp.status == 201) {
                 // alert(resp.data.message);
