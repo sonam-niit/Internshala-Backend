@@ -11,7 +11,7 @@ function Login() {
         e.preventDefault();
         //console.log(user);
         try {
-            const resp = await axios.post('http://localhost:5000/api/auth/login', user);
+            const resp = await axios.post('https://jwtdemo.onrender.com/api/auth/login', user);
             //console.log(resp);
             if (resp.status == 200) {
                 // alert(resp.data.message);

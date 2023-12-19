@@ -10,7 +10,7 @@ function Profile() {
         const token=localStorage.getItem('token');
         if(token!=undefined){
         try {
-            const resp=await axios('http://localhost:5000/api/user/profile',{
+            const resp=await axios('https://jwtdemo.onrender.com/api/user/profile',{
                 headers:{Authorization:`Bearer ${token}`}
             })
             console.log(resp);
