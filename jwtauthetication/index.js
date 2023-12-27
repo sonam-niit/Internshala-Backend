@@ -16,6 +16,7 @@ const auth_controller=require('./routes/auth_routes');
 
 app.use('/api/auth',auth_controller);
 app.use('/api/user',require('./routes/user_routes'));
+app.use('/api/product',require('./routes/product_routes'));
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server is listing on PORT: ${process.env.PORT}`);
