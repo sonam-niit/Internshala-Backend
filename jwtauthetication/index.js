@@ -14,6 +14,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 const auth_controller=require('./routes/auth_routes');
 
+app.use('/uploads',express.static('uploads'));
 app.use('/api/auth',auth_controller);
 app.use('/api/user',require('./routes/user_routes'));
 app.use('/api/product',require('./routes/product_routes'));

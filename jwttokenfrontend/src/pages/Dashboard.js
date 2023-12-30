@@ -15,6 +15,8 @@ function Dashboard() {
             <Col lg={6}>
                 <h1>Welcome</h1>
                 <Link to='/profile'>Profile</Link>
+                <Link to='/addproduct'>Add Product</Link>
+                <Link to='/products'>Get All products</Link>
             </Col>
         </Row>
      );
