@@ -1,0 +1,145 @@
+What is React?
+---------------------------------
+React is a JS Library using that we can create UI (User Interface)
+You can create SPA (single page application and you can make reusable components.
+
+Real Dom?
+--------------------------
+like a tree structure of HTML document.
+When you maupulate the DOM the entire DOM is getting updated.
+Updating the Real DOM is time-consuming when there is a large application because its re rendering the entie structure of APP
+Whenever you directly manupulate DOM is slower and lead to performance issue.
+
+Virtual DOM is importan feature of React
+-------------------------------------------------
+--its just a memory representation of Real DOM of the webpage created from.
+-- when you make any changes it updates the virtual DOM then compare with Real Dom then update only the things which changed rather than updating the real DOM.
+--Updating virtual DOM is more faster than Real DOM
+--Chaages made to the Virtual DOM not in real DOM beacuse of that its more efficient.
+
+
+How to Create React Application?
+
+npx create-react-app appname
+
+--> npx (npm execute) means rather than installing the create-react-app its just execute in the background and create react application.
+
+
+Let's create 1 application
+
+>npx create-react-app session1
+
+Move to that created app
+>cd session1
+
+Open the Application in VS Code
+
+>code .
+
+Let's start application
+>npm start
+
+you can see the output at localhost:3000/
+
+-----------------------------------------------------------------------------------------------
+Project Structure
+
+node_modules
+----------------------
+folder which is holding all the packages required for react application.
+(this folder we can delete whenever its needed because we will get it back again by executing npm install command.)
+
+.gitignore
+--------------------
+its for github which tells github to ignore certain files to upload on github
+
+Readme file
+-------------------
+for github where you can provide information of your project to the users.
+
+package.json file
+----------------------------
+config file for your application which is having all the dependencied used by your project.
+
+package lock file is for the exact location from where the dependencies downloaded.
+
+Public
+----------------
+index.html file which you can see in browser.
+
+Src
+--------------
+which is having main file connected with html file to load that is index.js file.
+
+index.js using app.js as <App /> tag which is called App component (root component)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

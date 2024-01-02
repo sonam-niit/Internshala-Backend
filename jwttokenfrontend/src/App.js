@@ -6,6 +6,8 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import AddProduct from "./pages/addProduct";
 import Products from "./pages/products";
+import PrivateRoute from "./components/PrivateRoute";
+import AuthService from "./components/AuthService";
 
 function App() {
   return (
@@ -16,10 +18,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <PrivateRoute path='/dashboard' isAuthenticated={true}>
+            <Route index element={<Dashboard />} />
+          </PrivateRoute>
+
+          {/* <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/addproduct" element={<AddProduct />} />
-          <Route path='/products' element={<Products />} />
+          <Route path='/products' element={<Products />} /> */}
         </Routes>
       </div>
     </Router>
