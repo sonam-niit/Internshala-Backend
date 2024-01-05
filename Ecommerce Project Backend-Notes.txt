@@ -1,0 +1,177 @@
+Ecommerce Project Backend
+--------------------------------------
+
+Models
+-------------------
+Customer
+	name
+	email
+	username
+	address
+	password
+	isAdmin (default false)
+Product
+	name
+	price
+	quantity
+	category
+	image
+	rating,comments //extra features
+Order:	
+	custId: Ref_Obj
+	amount
+	timestamp
+	del_status
+	address
+	products:[{product Obj Id:id,q:1}]
+
+==================================================================================================
+
+Routes
+--------------------------------
+
+User Routes:
+		/register (signUp)	
+		/login (signIn)
+		/getAllProducts   (All Products Page)
+		/getProductById   (Product Detail page)
+		/profile	  (User can see profile)
+		/getAllOrdersByUserId	  (User's Order History based on User Id)
+		/addOrderByUserId
+
+Admin routes:
+
+		/addProduct
+		/getAllProducts   (All Products Page)
+		/editProductById
+		/deleteProductById
+		/getAllUsers
+		/getAllOrders     (All Orders of all users)
+
+
+SeedRoutes:
+
+		/seedUsers
+				(Create 2 users one is normal user and 1 is admin User and manually Insert Data into DB)
+		/seddProducts
+
+				(Create 10-15 products in the form of Array and insert all in Products Model directly)
+
+	localhost:5000/seed/seedUser (2 users inserted in DB)
+	localhost:5000/seed/seedProducts (15 Products inserted in DB)
+
+	const newUser= new UserModel({
+	
+			name:"sonam",
+			email:"sonam@gmail.com"
+			address:"Mumbai",
+			isAdmin:true,
+			password: bcrypt.hash("Sonam@123");
+	})
+
+	newUser.save(); //Admin created
+
+	const newUser1= new UserModel({
+	
+			name:"aditya",
+			email:"aditya@gmail.com"
+			address:"Mumbai",
+			password: bcrypt.hash("123456");
+	})
+
+	newUser1.save(); //User Created
+
+
+
+Frontend: React Application
+---------------------------------------
+
+Register Page: after registeration redirect
+Login Page: After Login Redirect to 
+	(Store Token in Localstorage)
+AllProducts Page: this component will trigger getAllProducts API: if you click on any product you will be redirected to 
+ProductDetail Page: this component will trigger getProductById API
+
+	Either user context and user cart as state
+	or use redux and user cart value as store state
+	AddToCart: if Context the update the state
+	   	if redux then dispatch action for addToCart and update cart state
+	UpdateQuantity
+	deleteFromCart
+
+From the cart Implement checkout functinality
+	
+	ask for addressConfirmation -- next 
+	--payment (cashOnDelivry/paypal)
+
+	show order summary
+	
+	confirm Order // trigger api AddOrder
+	
+when user click again on continue shopping you will be redirected to AllProducts Page
+
+
+by clicking on Profile: show user profile
+OrderHistory: triggerAPI of getOrdersByUserId and show orders
+logout: remove token from localstorage and redirect user to Login page
+
+When User LoggedIn and if he is Admin then show AdminDahsboard Button
+-------------------------------------------------------------------------
+on Admin Dashbord you can create side bar or nav bar whre show 3 options
+
+manage products:
+		show one button AddProduct -- which will open Form for product Adding and then trigger addProductAPI
+
+		show all products with 2 buttons edit and delete 
+
+		/show all will call showAllproducts API
+		/edit will call editProductById API
+		/delete will call deletebyId API
+
+
+manage users: show all users with delete button
+manade orders: show all order
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	

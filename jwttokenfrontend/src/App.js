@@ -14,18 +14,18 @@ function App() {
     <Router>
       <div className="container">
         <ToastContainer />
-
         <Routes>
-          <Route path="/" element={<Register />} />
+          {/* <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <PrivateRoute path='/dashboard' isAuthenticated={true}>
             <Route index element={<Dashboard />} />
-          </PrivateRoute>
-
-          {/* <Route path="/dashboard" element={<Dashboard />} />
+          </PrivateRoute> */}
+          <Route path="/" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/addproduct" element={<AddProduct />} />
-          <Route path='/products' element={<Products />} /> */}
+          <Route path='/products' element={<Products />} />
         </Routes>
       </div>
     </Router>

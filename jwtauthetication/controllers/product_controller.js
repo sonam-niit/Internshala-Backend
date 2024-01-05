@@ -24,4 +24,13 @@ const getAllProducts=async (req,res)=>{
         res.status(500).send({message:"Internal Error Occured"})
     }
 }
-module.exports={addproduct,getAllProducts}
+const getProductById=async (req,res)=>{
+    try {
+        const data= await ProductModel.find();
+        res.status(200).send(data);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({message:"Internal Error Occured"})
+    }
+}
+module.exports={addproduct,getAllProducts,getProductById}
