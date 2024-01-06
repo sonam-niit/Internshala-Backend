@@ -25,8 +25,9 @@ const getAllProducts=async (req,res)=>{
     }
 }
 const getProductById=async (req,res)=>{
+
     try {
-        const data= await ProductModel.find();
+        const data= await ProductModel.find({_id:req.params.id});
         res.status(200).send(data);
     } catch (error) {
         console.log(error);
