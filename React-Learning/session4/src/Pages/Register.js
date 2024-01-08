@@ -1,12 +1,21 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
+
+    const navigate= useNavigate();
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        //apply logic to call APIs and store data in backend
+        alert("User Registered Successfully");
+        navigate('/login');
+    }
     return (
         <div className='container'>
             <h3 className='text-center mt-3 text-bg-info p-2'>Register Here</h3>
-            <Form className='mt-3'>
+            <Form className='mt-3' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" placeholder="John Doe" />
@@ -31,7 +40,7 @@ function Register() {
                         and must not contain spaces, special characters, or emoji.
                     </Form.Text>
                 </Form.Group>
-                <Button variant="primary">Register</Button>{' '}
+                <Button variant="primary" type='submit'>Register</Button>{' '}
             </Form>
         </div>
     );
