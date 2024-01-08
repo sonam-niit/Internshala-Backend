@@ -7,6 +7,8 @@ import Register from './Pages/Register';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import PageNotFound from './Pages/PageNotFound';
+import UserList from './Pages/UserList';
+import Details from './Pages/Details';
 
 function App() {
   return (
@@ -19,7 +21,11 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/users' element={<UserList />}/>
+          <Route path='/users/:id' element={<Details />} />
+
           <Route path='*' element={<PageNotFound />} />
+          {/* Make sure this route must be the last route of your routes */}
         </Routes>
         <Footer />
       </div>

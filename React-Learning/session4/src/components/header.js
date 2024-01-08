@@ -13,6 +13,7 @@ function Header() {
           <Nav className="me-auto">
             <Link to="/login" className='nav-link'>Login</Link>
             <Link to="/register" className='nav-link'>Register</Link>
+            <Link to="/users" className='nav-link'>User's List</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
