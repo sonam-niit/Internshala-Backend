@@ -48,7 +48,7 @@ console.log("Sonam's Balance: "+sonam.balance);
 class CurrentAccount extends Account{
 
     constructor(accNo,accHolderName,balance,transactionLimit){
-        super(accNo,accHolderName,balance);
+        super(accNo,accHolderName,balance);//call parent class constructor from child class
         this.transactionLimit= transactionLimit;
     }
 
