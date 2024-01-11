@@ -49,6 +49,54 @@ What is Object?
 -------------------------------------------
 Object is an Instance of a class
 we can create object of a class using class.
+=================================================================================================
+
+Stack DS
+--------------------------
+
+LIFO - last in first Out manner
+
+adding a new element is always inserted in top
+
+Practice Question
+---------------------------
+
+1. Prime Number (check)
+2. Print first 50 Prime Numbers
+3. Fibbonacci series with 30 numbers
+4. Reverse string
+5. Reverse Number
+6. Create one array from another array without using any readymade methods.
+5. Find out missing numbers from natural number series
+	([1,2,3,4,6,7,8])==> missing No 5
+	([1,3,4,5,7,8,9])==> missing No 2,6
+
+Implement all with functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
