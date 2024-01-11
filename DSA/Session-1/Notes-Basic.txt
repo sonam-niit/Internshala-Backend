@@ -1,0 +1,70 @@
+DSA
+Data Structures and Algorithams.
+
+DataStructure: it  is a format using that we can organize, manage and store data in such a way which allows efficient access and modification.
+
+Array
+Stacks and Queue
+Linked List
+Hash Tables
+Trees
+Graphs
+Heaps
+
+Solution:1
+-----------------------
+let sum=0;
+for(let i=1;i<=100;i++){
+    sum+=i;
+}
+console.log("Sum "+sum);
+
+Solution-2
+-------------------------------
+let n=100;
+let sum1= (n * (n+1))/2;
+console.log("Sum "+sum1);
+
+
+Obviously sol2 is much faster than 1.
+
+
+Cocepts of OOPs
+-------------------------------
+What is class?
+----------------------
+template or blue print of java object from that we can create multiple objects
+each object must have some features (properties) and methods (functions)
+
+assume: pen: color,brand, height, width, wight
+	methods: openCap,closeCap, write
+
+assume: keyboard: brand,modelNo,color
+	functions: connect,onekeyPressHandler
+
+class must have properties and function
+
+
+What is Object?
+-------------------------------------------
+Object is an Instance of a class
+we can create object of a class using class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
