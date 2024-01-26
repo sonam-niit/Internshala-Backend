@@ -1,0 +1,39 @@
+create one folder and create package.json
+>npm init -y
+
+install below dependencies in your folder
+
+npm i express mongoose bcrypt dotenv nodemon
+
+express:to create express server
+mongoose: for DB connection
+bcrypt: for password encrption
+dotenv: to use seperate env file for config data like port, db url etc
+nodemon: to restart server automatically
+
+
+After this setup your restart server command with start keyword by editing package.json file and add "start" in script 
+"start":"nodemon server.js"
+
+First create .env file and add PORT and mongodurl
+
+For DB Connection: created folder named util and create one file named dbconnect.js
+
+create folder named model and create user.model.js file for Model creation
+
+create folder named controller and user.controller.js file inside that
+
+create folder named routes and create user.route.js file for all routes
+
+create server.js file atlast and start your program by executing npm start command in your terminal
+
+check your POST request using below JSON Data
+{
+    "name":"bob",
+    "username":"bobby",
+    "email":"bobby@gmail.com",
+    "password":"123456"
+}
+
+Check other methods as well
+http://localhost:5000/api/v1/user

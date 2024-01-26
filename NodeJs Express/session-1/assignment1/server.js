@@ -22,6 +22,7 @@ app.get("/employee",async (req,res)=>{
                 <td>${e.name}</td>
                 <td>${e.designation}</td>
                 <td>${e.salary}</td>
+                <td><a href='/employee/${e.id}'>View</td>
         </tr>`
     }
     res.status(200).send(html);
