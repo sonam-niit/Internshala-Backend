@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Products from "./components/Products";
 import NewProduct from "./components/NewProduct";
 import ProductList from "./components/ProductList";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/products" element={<ProductList />} /> 
           <Route path="/addproduct" element={<NewProduct />} /> 
+          <Route path="/products/:id" element={<ProductDetail />} />
         </Routes>
       </div>
     </BrowserRouter>

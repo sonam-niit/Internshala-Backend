@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function ProductList() {
 
@@ -29,7 +30,7 @@ function ProductList() {
                                         <h5 className="card-title">{item.name}</h5>
                                         <h5 className='text-center'>${item.price}</h5>
                                         <p className="card-text">{item.description}</p>
-                                        <a href="#" className="btn btn-primary">View Product</a>
+                                        <Link to={`/products/${item._id}`} className="btn btn-primary">View Product</Link>
                                     </div>
                             </div>
                         </div>
