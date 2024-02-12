@@ -1,12 +1,11 @@
-const { isObjectIdOrHexString } = require('mongoose');
 const ProductModel= require('../models/product.model');
 
 const addProduct=async(req,res)=>{
     try {
         const {name,price,description,quantity}= req.body;
         const picture=req.file.path;
-
-        const newProduct= new ProductModel({name,price,description,quantity,picture});
+        const path= picture.split('\\')[1];
+        const newProduct= new ProductModel({name,price,description,quantity,picture:path});
         await newProduct.save();
 
         res.status(201).json({message:"Product Added"})
