@@ -10,6 +10,7 @@ const addProduct=async(req,res)=>{
 
         res.status(201).json({message:"Product Added"})
     } catch (error) {
+        console.log(error);
         res.status(500).json({message:"Some Internal Error Occured"})
     }
 }
