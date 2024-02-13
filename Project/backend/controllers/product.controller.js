@@ -1,12 +1,14 @@
 const ProductModel= require('../models/product.model');
+const cloudinary= require('cloudinary');
 
 const addProduct=async(req,res)=>{
     try {
         const {name,price,description,quantity}= req.body;
-        const picture=req.file.path;
-        const path= picture.split('\\')[1];
-        const newProduct= new ProductModel({name,price,description,quantity,picture:path});
-        await newProduct.save();
+        const result=await cloudinary.uploader.upload(req.file.buffer);
+        const path= result.secure_url;
+        console.log(path);
+        // const newProduct= new ProductModel({name,price,description,quantity,picture:path});
+        // await newProduct.save();
 
         res.status(201).json({message:"Product Added"})
     } catch (error) {
