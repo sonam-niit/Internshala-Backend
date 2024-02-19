@@ -13,6 +13,7 @@ function partition(arr,low,high){
     const pivot= arr[high];
     //initialize the partition index
     let i= low-1;
+
     for(let j=low;j<high;j++){
         if(arr[j]<pivot){
             i++;

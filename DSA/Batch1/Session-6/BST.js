@@ -45,6 +45,7 @@ class BinarySearchTree{
         }
     }
 }
+
 const tree= new BinarySearchTree();
 for(let i=1;i<=5;i++){
     tree.insert(Number(rl.question(`Enter ${i}th Number`)))
