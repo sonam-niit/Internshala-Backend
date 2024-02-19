@@ -2,11 +2,9 @@ function mergeSort(arr) {
     if (arr.length <= 1) {
         return arr;
     }
-
     const middle = Math.floor(arr.length / 2);
     const leftHalf = arr.slice(0, middle);
     const rightHalf = arr.slice(middle);
-
     return merge(mergeSort(leftHalf), mergeSort(rightHalf));
 }
 function merge(left, right) {

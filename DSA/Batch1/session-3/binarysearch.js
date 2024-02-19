@@ -1,10 +1,8 @@
 const array = [1, 2, 5, 9, 10, 15, 20, 25, 27, 30];
 
 function searchNumber(array, search) {
-
     let ub = array.length - 1;
     let lb = 0
-
     while (lb <= ub) {
         let m = Math.floor((lb + ub) / 2);
         if (array[m] == search) {
