@@ -1,0 +1,12 @@
+1. Write custome sorting program in JS via BubbleSort.
+2. Write a program to check if a string or word or number is palindrom or not?
+
+    Palindrom mean if you read string or number from left to right and right to left it
+    same, eg. 12321 its palindrom
+              malayalam its palindrom
+              jahaj its palindrom
+    reverse your string and compare with original if its same then print its palindrom.
+
+3. Write a program to check if value/target exist or not in ascending array with O(logn)
+   complexity?
+            Binary Search Algorithm
