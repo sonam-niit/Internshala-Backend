@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((err)=>console.log('Error',err))
 
 app.use('/api/auth',require('./routes/user.routes'));
+app.use('/api/todo',require('./routes/todo.routes'));
 
 app.listen(process.env.PORT,()=>{
     console.log(`Server started on PORT ${process.env.PORT}`);
