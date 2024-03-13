@@ -1,6 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 function Header() {
+
+    const token = localStorage.getItem('token');
+    const navigate= useNavigate();
+    const handleLogout=()=>{
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        navigate('/login');
+    }
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -14,10 +22,17 @@ function Header() {
                             <a className="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <Link to='register' className='nav-link'>Register</Link>
+                            {token ?
+                                ""
+                                : <Link to='register' className='nav-link'>Register</Link>
+                            }
+
                         </li>
                         <li className="nav-item">
-                            <Link to='register' className='nav-link'>Login</Link>
+                            {token ?
+                                <button className='nav-link' onClick={handleLogout}>logout</button>
+                                : <Link to='login' className='nav-link'>Login</Link>
+                            }
                         </li>
                     </ul>
 
