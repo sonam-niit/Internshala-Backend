@@ -9,7 +9,8 @@ function Register() {
         try {
             const resp= await axios.post('http://localhost:5000/api/auth/register',user);
             if(resp.status==201){
-                toast.success(resp.data.message)
+                toast.success(resp.data.message);
+                setUser({name:'',email:'',username:'',password:''})
             }
         } catch (error) {
             toast.error(error.response.data.message);
