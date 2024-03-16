@@ -1,0 +1,59 @@
+Deployment on Render
+-----------------------------------
+use your project link on github
+create account on Render
+click on create web service
+
+   select Github repository
+   select default branch
+   provide root folder location
+
+build: npm install
+
+start: npm start
+
+add required environment variables
+
+use your atlas DB url for live DB connectivity
+
+Deploy and check the Logs
+
+You will get below link when its deployed
+https://internshala-backend-rzia.onrender.com
+
+check api using below
+https://internshala-backend-rzia.onrender.com/api/auth/register
+
+In React project change the Proxy from localhost:5000 to the render link everywhere.
+
+Deploy React Application on Netlify
+---------------------------------------------
+after that create netlify project
+
+select Git, give proper folder location (root folder of your project)
+
+in Build: npm run build
+publish Directory: build
+
+Add one environment variable for warning removal
+CI and make the value false
+
+Trigger deploy and check the logs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
