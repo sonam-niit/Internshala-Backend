@@ -9,7 +9,7 @@ function Login() {
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try {
-            const resp= await axios.post('http://localhost:5000/api/auth/login',user);
+            const resp= await axios.post('https://internshala-backend-rzia.onrender.com/api/auth/login',user);
             if(resp.status==200){
                 toast.success(resp.data.message);
                 localStorage.setItem('token',resp.data.token);

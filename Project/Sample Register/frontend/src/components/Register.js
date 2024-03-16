@@ -7,7 +7,7 @@ function Register() {
     const handleSubmit=async (e)=>{
         e.preventDefault();
         try {
-            const resp= await axios.post('http://localhost:5000/api/auth/register',user);
+            const resp= await axios.post('https://internshala-backend-rzia.onrender.com/api/auth/register',user);
             if(resp.status==201){
                 toast.success(resp.data.message);
                 setUser({name:'',email:'',username:'',password:''})
